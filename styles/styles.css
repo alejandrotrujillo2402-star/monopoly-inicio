@@ -1,0 +1,90 @@
+
+/*Colores de agregar jugador y lista jugador*/
+.lista {
+  color: green;
+}
+.portada {
+  background: darkblue;
+  color: white;
+  border-radius: 15px;
+  font-weight: bold;
+}
+.inicio {
+  background: darkgray;
+  color: black;
+  border: 2px solid;
+}
+.inicio:hover {
+  background:green;
+}
+.alerta {
+  background: red;
+  color: white;
+}
+.table-theme thead {
+  background: black;
+  color: white;
+}
+.iniciar {
+  background: darkgray;
+  color: black;
+  border: 2px solid;
+}
+.iniciar:hover {
+  background:green;
+}
+
+/* Fichas */
+.fucha {
+  font-size: 2rem;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 55px;
+  background: white;
+  width: 70px;
+  height: 70px;
+  transition: all 0.2s ease-in-out;
+}
+.fucha.active {
+  border-color: green;
+  transform: scale(1.3);
+  background-color: green;
+  color: white;
+}
+.fucha:hover {
+  background-color: green;
+  transform: scale(1.4);
+}
+
+/* Colores */
+.circulo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid black;
+  transition: all 0.2s;
+}
+.circulo.active {
+  border-color: black;
+  transform: scale(1.3);
+}
+.circulo:hover {
+  transform: scale(1.19);
+}
+
+/* Colores disponibles */
+.botonRed {
+  background-color: red;
+}
+.botongreen {
+  background-color: green;
+}
+.botonyellow {
+  background-color: yellow;
+}
+.botonblack {
+  background-color: black;
+}
+.botonblue {
+  background-color: blue;
+}
