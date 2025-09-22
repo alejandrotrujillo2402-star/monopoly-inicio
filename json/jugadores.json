@@ -1,18 +1,18 @@
 [
   {
-    "id": 1758518579996,
-    "nombre": "alejandro",
-    "pais": "Colombia",
-    "ficha": "🏠",
-    "color": "botonyellow",
-    "dinero": 1000
-  },
-  {
     "id": 1758518595239,
     "nombre": "katrhin",
     "pais": "United States",
     "ficha": "🎩",
     "color": "botonRed",
+    "dinero": 1000
+  },
+  {
+    "id": 1758583272028,
+    "nombre": "Manuela",
+    "pais": "Colombia",
+    "ficha": "✈️",
+    "color": "botonblue",
     "dinero": 1000
   }
 ]
