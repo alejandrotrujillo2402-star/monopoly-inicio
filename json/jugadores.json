@@ -6,5 +6,13 @@
     "ficha": "✈️",
     "color": "botonblue",
     "dinero": 1000
+  },
+  {
+    "id": 1758587196177,
+    "nombre": "juan",
+    "pais": "Spain (España)",
+    "ficha": "🐘",
+    "color": "botonyellow",
+    "dinero": 1000
   }
 ]

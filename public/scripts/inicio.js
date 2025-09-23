@@ -184,15 +184,36 @@ document.addEventListener("DOMContentLoaded", () => {
     cargarJugadores();
   });
 
-  // 👉 Iniciar juego
+  // 👉 Iniciar juego (con redirección a tablero) MANUELA -----------------------------
   btnIniciar.addEventListener("click", () => {
     const mensaje = document.getElementById("mensaje-juego");
-    mensaje.innerHTML="";
-    if (jugadores.length < 2) mensaje.innerHTML=`<div class="alert alert-danger">⚠️ Se necesitan mínimo 2 jugadores.</div>`;
-    else if (jugadores.length > 4) mensaje.innerHTML=`<div class="alert alert-danger">⚠️ Máximo 4 jugadores.</div>`;
-    else mensaje.innerHTML=`<div class="alert alert-success">🎉 Juego iniciado con ${jugadores.length} jugadores!</div>`;
-    setTimeout(()=>mensaje.innerHTML="",3000);
+    mensaje.innerHTML = "";
+
+    if (jugadores.length < 2) {
+      mensaje.innerHTML = `<div class="alert alert-danger">⚠️ Se necesitan mínimo 2 jugadores.</div>`;
+      setTimeout(() => (mensaje.innerHTML = ""), 3000);
+      return;
+    }
+
+    if (jugadores.length > 4) {
+      mensaje.innerHTML = `<div class="alert alert-danger">⚠️ Máximo 4 jugadores.</div>`;
+      setTimeout(() => (mensaje.innerHTML = ""), 3000);
+      return;
+    }
+
+    // Éxito → mostrar mensaje breve y redirigir
+    mensaje.innerHTML = `<div class="alert alert-success">🎉 Juego iniciado con ${jugadores.length} jugadores! Redirigiendo...</div>`;
+
+    // Si quieres pasar info al tablero, descomenta la siguiente línea:
+    // localStorage.setItem('jugadores', JSON.stringify(jugadores));
+
+    setTimeout(() => {
+      const w = window.innerWidth;
+      const target = (w < 640) ? "board-mobile.html" : "tablero.html";
+      window.location.href = target;
+    }, 700);
   });
+
 
   // 👉 Inicialización
   cargarJugadores();
